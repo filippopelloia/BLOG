@@ -15,11 +15,19 @@ body{
     background-color: gold;
 }
 
+.no-scrolling{
+    overflow-y: hidden;
+}
+
 nav, footer{
     background-color: #036;
 }
 
 nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
     border-top: 4px solid red;
 }
 
@@ -31,9 +39,34 @@ main, #left, #right{
     height: auto;
 }
 
+main{
+    z-index: 1;
+}
+
 /* #left, #right{
     height: 100vh;
 } */
+
+#search{
+    height: 5vh;
+    width: 5vh;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+#search-section{
+    z-index: 2;
+    width: 100%;
+    background-color: brown;
+}
+
+#search-section > div{
+    height: 100vh;
+}
+
+.hide{
+    display: none;
+}
 
 #left{
     background-color: pink;
@@ -50,7 +83,7 @@ main, #left, #right{
 }
 
 #first-image{
-    width: 90vh;
+    /* width: 90vh; */
     height: 58vh;
     background-color: yellow;
 }
